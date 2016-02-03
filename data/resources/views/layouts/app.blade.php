@@ -75,8 +75,6 @@
                              
                               <li><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Ekspor Data</a></li>
                       
-                              <div class="divider"></div>
-
                               <li><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Impor Data</a></li>
                       
                               <div class="divider"></div>
