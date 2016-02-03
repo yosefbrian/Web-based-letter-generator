@@ -8,7 +8,8 @@
   <title>SIM-Kepegawaian Dinas Pendidikan DIY</title>
   <meta name="author" content="Vinsensius Satya, Yosef Brian, Misbach Imaduddin">
 
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="{{ URL::asset('img/favicon.ico') }}" rel="shortcut icon" />  
+  
 
   <!-- Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
