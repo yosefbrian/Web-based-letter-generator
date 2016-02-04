@@ -327,7 +327,7 @@
                                 
                                 <div class="modal-body">
                                     <input type="hidden" value="<?php echo $book->id;?>" name="id">
-                                    <h5>Apakah Anda yakin akan mengahpus data ini?</h5>
+                                    <h5>Apakah Anda yakin akan menghapus data ini?</h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>

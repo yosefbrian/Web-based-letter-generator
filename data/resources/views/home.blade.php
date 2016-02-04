@@ -54,7 +54,7 @@
                     </div>
                        <div class="form-group" >
                        <label class="control-label" for="kepada">Kepada</label>
-                            <input name="kepada" id="kepada" type="text" class="form-control"/>
+                            <input placeholder="Masukkan Penerima Surat" name="kepada" id="kepada" type="text" class="form-control"/>
                       </div>
 
 
@@ -77,52 +77,49 @@
 
                       <div class="form-group" >
                        <label class="control-label" for="NIP">Masukkan NIP</label>
-                            <input name="NIP1" id="NIP1" type="text" class="form-control"/>
+                            <input name="NIP1" placeholder="Masukkan NIP" id="NIP1" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip2">
                        <label class="control-label" for="NIP2">Masukkan NIP 2</label>
-                            <input name="NIP2" id="NIP2" type="text" class="form-control" />
+                            <input name="NIP2" placeholder="Masukkan NIP" id="NIP2" type="text" class="form-control" />
                       </div>
                       <div class="form-group" id="grpnip3">
                        <label class="control-label" for="NIP3">Masukkan NIP 3</label>
-                            <input name="NIP3" id="NIP3" type="text" class="form-control"/>
+                            <input name="NIP3" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip4">
                        <label class="control-label" for="NIP4">Masukkan NIP 4</label>
-                            <input name="NIP4" id="NIP3" type="text" class="form-control"/>
+                            <input name="NIP4" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip5">
                        <label class="control-label" for="NIP5">Masukkan NIP 5</label>
-                            <input name="NIP5" id="NIP5" type="text" class="form-control"/>
+                            <input name="NIP5" placeholder="Masukkan NIP" id="NIP5" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip6">
                        <label class="control-label" for="NIP6">Masukkan NIP 6</label>
-                            <input name="NIP6" id="NIP6" type="text" class="form-control"/>
+                            <input name="NIP6" placeholder="Masukkan NIP" id="NIP6" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip7">
                        <label class="control-label" for="NIP7">Masukkan NIP 7</label>
-                            <input name="NIP7" id="NIP7" type="text" class="form-control"/>
+                            <input name="NIP7" placeholder="Masukkan NIP" id="NIP7" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip8">
                        <label class="control-label" for="NIP8">Masukkan NIP 8</label>
-                            <input name="NIP8" id="NIP8" type="text" class="form-control"/>
+                            <input name="NIP8" placeholder="Masukkan NIP" id="NIP8" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip9">
                        <label class="control-label" for="NIP9">Masukkan NIP 9</label>
-                            <input name="NIP9" id="NIP9" type="text" class="form-control"/>
+                            <input name="NIP9" placeholder="Masukkan NIP" id="NIP9" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip10">
                        <label class="control-label" for="NIP10">Masukkan NIP 10</label>
-                            <input name="NIP10" id="NIP10" type="text" class="form-control"/>
+                            <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
                       </div>
 
 
-                        <td>&nbsp;</td>
-                        <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" />
-                        <!--        
-                        <input type="submit" name="btn_template" value="See template" />
-                        <input type="submit" name="btn_script" value="See PHP script" /> 
-                        -->
+                      
+                        <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" style="float:right" />
+                      
                        
                   </form>
                     <div class="col-xs-7">
