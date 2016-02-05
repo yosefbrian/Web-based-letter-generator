@@ -1,28 +1,28 @@
 <table>
  <tbody>
   <tr>
-                    <th>Id</th>
-                    <th>NIP</th>
-               		<th>No Karpeg</th>
-                    <th>Nama</th>
-                   	<th>Jenis Kelamin</th>
-                    <th>Agama</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>TMT CPNS</th>
-                    <th>TMT PNS</th>
-                    <th>TMT Pangkat Terakhir</th>
-                    <th>Pangkat</th>
-                    <th>Golongan</th>
-                    <th>Jabatan</th>
-                    <th>Unit Kerja</th>
-                    <th>Instansi</th>
-                    <th>Pendidikan Terakhir</th>
-                    <th>Pendidikan Tahun Lulus</th>
-                    <th>Pendidikan Univ</th>
-                    <th>Pendidikan Tempat</th>
-                    <th>Pendidikan Jurusan</th>
-                    <th>Status</th>  
+                    <th>id</th>
+                    <th>nip</th>
+               		<th>no_karpeg</th>
+                    <th>nama</th>
+                   	<th>jenis_kelamin</th>
+                    <th>agama</th>
+                    <th>tempat_lahir</th>
+                    <th>tanggal_lahir</th>
+                    <th>tmt_cpns</th>
+                    <th>tmt_pns</th>
+                    <th>tmt_pangkat_terakhir</th>
+                    <th>pangkat</th>
+                    <th>golongan</th>
+                    <th>jabatan</th>
+                    <th>unit_kerja</th>
+                    <th>instansi</th>
+                    <th>pendidikan_terakhir</th>
+                    <th>pendidikan_tahun_lulus</th>
+                    <th>pendidikan_univ</th>
+                    <th>pendidikan_tempat</th>
+                    <th>pendidikan_jurusan</th>
+                    <th>status</th>  
 
   </tr>
   @foreach($users as $user)
