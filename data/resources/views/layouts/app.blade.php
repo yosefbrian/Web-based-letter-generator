@@ -74,9 +74,9 @@
 
                           <ul class="dropdown-menu" role="menu">
                              
-                              <li><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Ekspor Data</a></li>
+                              <li><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Download Data</a></li>
                       
-                              <li><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Impor Data</a></li>
+                              <li><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Upload Data</a></li>
                       
                               <div class="divider"></div>
                           
@@ -86,35 +86,34 @@
                       </li>
                               <div class="modal fade" id="modalimport" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
-                                <div class="modal-content" align="center">
-                                    <div class="panel">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <span style="css/bootstrap-min.css"><h3><b>Unggah Data</b></h3></span>
-                                    </div>
-                                    </div>
+                                <div class="modal-content">
                                     
-
-
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title"><b>Unggah Data</b></h4>
+                                </div>
                                     <div class="modal-body">
-                                      <div class="panel">
-                                      <input type="hidden" value="#" name="id">
-
-                                    <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data">
-                                      <label for="fileToUpload">Impor file excel (xls)</label>
-                                      <input type="file" class="btn btn-default btn-file" name="fileToUpload" id="fileToUpload">
-                                      <input type="submit" class="btn btn-success" value="Import" name="submit">
-                                      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                                     
+                                    <div class="col-xs-12">                          
+                                      <label for="fileToUpload">Import file excel (xls)</label>
+                                      <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data">                                     
+                                        <div class="col-xs-8 col-md-offset-1">
+                                          <input type="file" class="btn btn-default btn-file" name="fileToUpload" id="fileToUpload">
+                                        </div>
+                                        <div class="col-xs-3">
+                                        <input type="submit" class="btn btn-success" value="Upload" name="submit">
+                                        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                                        </div>
                                     </form>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-info" data-dismiss="modal">Batal</button>
                                     </div>
                                     
-                              </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
+                                    </div>
+                                    
+                              
                               </div>
                               </div>
                               </div>
