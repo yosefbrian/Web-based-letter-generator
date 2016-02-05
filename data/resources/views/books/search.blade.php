@@ -3,11 +3,12 @@
 @section('content.getData')
 
 <div class="col-xs-12">
-  <a class="btn btn-primary" onclick="goBack()">Kembali</a>
+  <a class="btn btn-primary" style="font-size: 12pt" onclick="goBack()">Kembali</a>
+
   <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
     <div class="col-xs-9">{!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}</div>
-    <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
+    <button type="submit" class="btn btn-default" style="font-size: 12pt"><span class="fa fa-search" style="font-size: 12pt"></span> </button>
   {!! Form::close() !!}
   </div>
 </div>
