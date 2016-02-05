@@ -3,7 +3,7 @@
 @section('content.nav')
 <ul class="nav nav-tabs">
                     <li>
-                      <a href="{{ url('/home') }}">Buat</a>
+                      <a href="{{ url('/home') }}">Surat</a>
                     </li>
                     <li class="active">
                       <a href="{{ url('/getData') }}">Data</a>

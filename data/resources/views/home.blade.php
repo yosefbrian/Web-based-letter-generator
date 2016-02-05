@@ -7,14 +7,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
                   <ul class="nav nav-tabs">
                     <li class="active">
-                      <a href="{{ url('/home') }}">Buat</a>
+                      <a href="{{ url('/home') }}">Surat</a>
                     </li>
                     <li>
                       <a href="{{ url('/getData') }}">Data</a>
@@ -53,13 +53,13 @@
                       </select>
                     </div>
                        <div class="form-group" >
-                       <label class="control-label" for="kepada">Kepada</label>
+                       <label class="control-label" for="kepada">Surat Ini Ditujukan Kepada</label>
                             <input placeholder="Masukkan Penerima Surat" name="kepada" id="kepada" type="text" class="form-control"/>
                       </div>
 
 
                       <div class="form-group" id="grpid">
-                      <label class="control-label" for="grp_id">Jumlah Identitas</label><br>
+                      <label class="control-label" for="grp_id">Jumlah Pegawai</label><br>
                         <select id="jml_id" name="jml_id" class="form-control selectpicker">
                          <option value="1">1</option>
                           <option value="2">2</option>
@@ -80,39 +80,39 @@
                             <input name="NIP1" placeholder="Masukkan NIP" id="NIP1" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip2">
-                       <label class="control-label" for="NIP2">Masukkan NIP 2</label>
+                       <label class="control-label" for="NIP2">Masukkan NIP</label>
                             <input name="NIP2" placeholder="Masukkan NIP" id="NIP2" type="text" class="form-control" />
                       </div>
                       <div class="form-group" id="grpnip3">
-                       <label class="control-label" for="NIP3">Masukkan NIP 3</label>
+                       <label class="control-label" for="NIP3">Masukkan NIP</label>
                             <input name="NIP3" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip4">
-                       <label class="control-label" for="NIP4">Masukkan NIP 4</label>
+                       <label class="control-label" for="NIP4">Masukkan NIP</label>
                             <input name="NIP4" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip5">
-                       <label class="control-label" for="NIP5">Masukkan NIP 5</label>
+                       <label class="control-label" for="NIP5">Masukkan NIP</label>
                             <input name="NIP5" placeholder="Masukkan NIP" id="NIP5" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip6">
-                       <label class="control-label" for="NIP6">Masukkan NIP 6</label>
+                       <label class="control-label" for="NIP6">Masukkan NIP</label>
                             <input name="NIP6" placeholder="Masukkan NIP" id="NIP6" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip7">
-                       <label class="control-label" for="NIP7">Masukkan NIP 7</label>
+                       <label class="control-label" for="NIP7">Masukkan NIP</label>
                             <input name="NIP7" placeholder="Masukkan NIP" id="NIP7" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip8">
-                       <label class="control-label" for="NIP8">Masukkan NIP 8</label>
+                       <label class="control-label" for="NIP8">Masukkan NIP</label>
                             <input name="NIP8" placeholder="Masukkan NIP" id="NIP8" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip9">
-                       <label class="control-label" for="NIP9">Masukkan NIP 9</label>
+                       <label class="control-label" for="NIP9">Masukkan NIP</label>
                             <input name="NIP9" placeholder="Masukkan NIP" id="NIP9" type="text" class="form-control"/>
                       </div>
                       <div class="form-group" id="grpnip10">
-                       <label class="control-label" for="NIP10">Masukkan NIP 10</label>
+                       <label class="control-label" for="NIP10">Masukkan NIP</label>
                             <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
                       </div>
 
@@ -127,7 +127,8 @@
                         <ol>
                           <li>Pilih jenis surat yang akan dibuat</li>
                           <li>Masukkan penerima surat</li>
-                          <li>Masukkan NIP</li>
+                          <li>Tentukan jumlah pegawai yang akan dibuatkan surat</li>
+                          <li>Masukkan NIP pegawai yang akan dibuatkan surat</li>
                           <li>Klik Cetak</li>
                         </ol>
                         <p>Setelah Anda memilih cetak maka file akan otomatis terunduh melalui browser yang Anda gunakan saat ini.</p>                            
