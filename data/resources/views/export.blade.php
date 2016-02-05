@@ -23,7 +23,6 @@
                     <th>pendidikan_tempat</th>
                     <th>pendidikan_jurusan</th>
                     <th>status</th>  
-
   </tr>
   @foreach($users as $user)
   <tr>
