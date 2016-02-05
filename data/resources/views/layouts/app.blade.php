@@ -74,9 +74,9 @@
 
                           <ul class="dropdown-menu" role="menu">
                              
-                              <li><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Download Data</a></li>
+                              <li><a data-placement="bottom" title="Download Database Pegawai" href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Download Data</a></li>
                       
-                              <li><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Upload Data</a></li>
+                              <li><a data-placement="bottom" title="Tambah Database Pegawai" href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Upload Data</a></li>
                       
                               <div class="divider"></div>
                           
