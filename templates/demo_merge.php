@@ -22,7 +22,7 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "cobacrud";
+$dbname = "pegawai";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -76,117 +76,125 @@ switch ($bulan) {
         $tanggal=$hari." Desember ".$tahun;
         break;
     default:
-        $tanggal=$hari."Bulan".$tahun;;
+        $tanggal=$hari."Bulan".$tahun;
 }
 
 $kepada = (isset($_POST['kepada'])) ? $_POST['kepada'] : '';
 $kepada = trim(''.$kepada);
 if ($kepada=='') $kepada = "(kepada)";
 
-$tanggalmulai = (isset($_POST['tanggalmulai'])) ? $_POST['tanggalmulai'] : '';
-$tanggalmulai = trim(''.$tanggalmulai);
-if ($tanggalmulai=='') $tanggalmulai = "(tanggal mulai)";
+$jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
 
-$lamacuti = (isset($_POST['lamacuti'])) ? $_POST['lamacuti'] : '';
-$lamacuti = trim(''.$lamacuti);
-if ($lamacuti=='') $lamacuti = "";
-
-$tanggalselesai = date('Y-m-d',strtotime($tanggalmulai . "+" .$lamacuti. "days"));
-
-$harimulai = substr($tanggalmulai, 8,2);
-$bulanmulai = substr($tanggalmulai, 5,2);
-$tahunmulai = substr($tanggalmulai, 0,4);
-
-switch ($bulanmulai) {
-    case "01":
-        $tanggalmulai=$harimulai." Januari ".$tahunmulai;
-        break;
-    case "02":
-        $tanggalmulai=$harimulai." Februari ".$tahunmulai;
-        break;
-    case "03":
-        $tanggalmulai=$harimulai." Maret ".$tahunmulai;
-        break;
-     case "04":
-        $tanggalmulai=$harimulai." April ".$tahunmulai;
-        break;
-    case "05":
-        $tanggalmulai=$harimulai." Mei ".$tahunmulai;
-        break;
-    case "06":
-        $tanggalmulai=$harimulai." Juni ".$tahunmulai;
-        break;
-    case "07":
-        $tanggalmulai=$harimulai." Juli ".$tahunmulai;
-        break;
-    case "08":
-        $tanggalmulai=$harimulai." Agustus ".$tahunmulai;
-        break;
-    case "09":
-        $tanggalmulai=$harimulai." September ".$tahunmulai;
-        break;
-    case "10":
-        $tanggalmulai=$harimulai." Oktober ".$tahunmulai;
-        break;
-    case "11":
-        $tanggalmulai=$harimulai." November ".$tahunmulai;
-        break;
-    case "12":
-        $tanggalmulai=$harimulai." Desember ".$tahunmulai;
-        break;
-    default:
-        $tanggalmulai=$harimulai."Bulan".$tahunmulai;
+if($jml_id==''){
+    $jml_id=1;
 }
 
-$hariselesai = substr($tanggalselesai, 8,2);
-$bulanselesai = substr($tanggalselesai, 5,2);
-$tahunselesai = substr($tanggalselesai, 0,4);
+for($i=1; $i<=$jml_id; $i++){
 
-switch ($bulanselesai) {
+
+${'tanggalmulai'.$i} = (isset($_POST['tanggalmulai'.$i])) ? $_POST['tanggalmulai'.$i] : '';
+${'tanggalmulai'.$i} = trim(''.${'tanggalmulai'.$i});
+if (${'tanggalmulai'.$i}=='') ${'tanggalmulai'.$i} = "(tanggal mulai)";
+
+${'lamacuti'.$i} = (isset($_POST['lamacuti'.$i])) ? $_POST['lamacuti'.$i] : '';
+${'lamacuti'.$i} = trim(''.${'lamacuti'.$i});
+if (${'lamacuti'.$i}=='') ${'lamacuti'.$i} = "";
+
+${'tanggalselesai'.$i} = date('Y-m-d',strtotime(${'tanggalmulai'.$i} . "+" .${'lamacuti'.$i}. "days"));
+
+${'harimulai'.$i} = substr(${'tanggalmulai'.$i}, 8,2);
+${'bulanmulai'.$i} = substr(${'tanggalmulai'.$i}, 5,2);
+${'tahunmulai'.$i} = substr(${'tanggalmulai'.$i}, 0,4);
+
+switch (${'bulanmulai'.$i}) {
     case "01":
-        $tanggalselesai=$hariselesai." Januari ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Januari ".${'tahunmulai'.$i};
         break;
     case "02":
-        $tanggalselesai=$hariselesai." Februari ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Februari ".${'tahunmulai'.$i};
         break;
     case "03":
-        $tanggalselesai=$hariselesai." Maret ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Maret ".${'tahunmulai'.$i};
         break;
      case "04":
-        $tanggalselesai=$hariselesai." April ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." April ".${'tahunmulai'.$i};
         break;
     case "05":
-        $tanggalselesai=$hariselesai." Mei ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Mei ".${'tahunmulai'.$i};
         break;
     case "06":
-        $tanggalselesai=$hariselesai." Juni ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Juni ".${'tahunmulai'.$i};
         break;
     case "07":
-        $tanggalselesai=$hariselesai." Juli ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Juli ".${'tahunmulai'.$i};
         break;
     case "08":
-        $tanggalselesai=$hariselesai." Agustus ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Agustus ".${'tahunmulai'.$i};
         break;
     case "09":
-        $tanggalselesai=$hariselesai." September ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." September ".${'tahunmulai'.$i};
         break;
     case "10":
-        $tanggalselesai=$hariselesai." Oktober ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Oktober ".${'tahunmulai'.$i};
         break;
     case "11":
-        $tanggalselesai=$hariselesai." November ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." November ".${'tahunmulai'.$i};
         break;
     case "12":
-        $tanggalselesai=$hariselesai." Desember ".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}." Desember ".${'tahunmulai'.$i};
         break;
     default:
-        $tanggalselesai=$hariselesai."Bulan".$tahunselesai;
+        ${'tanggalmulai'.$i}=${'harimulai'.$i}."Bulan".${'tahunmulai'.$i};
 }
 
+${'hariselesai'.$i} = substr(${'tanggalselesai'.$i}, 8,2);
+${'bulanselesai'.$i} = substr(${'tanggalselesai'.$i}, 5,2);
+${'tahunselesai'.$i} = substr(${'tanggalselesai'.$i}, 0,4);
+
+switch (${'bulanselesai'.$i}) {
+    case "01":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Januari ".${'tahunselesai'.$i};
+        break;
+    case "02":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Februari ".${'tahunselesai'.$i};
+        break;
+    case "03":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Maret ".${'tahunselesai'.$i};
+        break;
+     case "04":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." April ".${'tahunselesai'.$i};
+        break;
+    case "05":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Mei ".${'tahunselesai'.$i};
+        break;
+    case "06":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Juni ".${'tahunselesai'.$i};
+        break;
+    case "07":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Juli ".${'tahunselesai'.$i};
+        break;
+    case "08":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Agustus ".${'tahunselesai'.$i};
+        break;
+    case "09":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." September ".${'tahunselesai'.$i};
+        break;
+    case "10":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Oktober ".${'tahunselesai'.$i};
+        break;
+    case "11":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." November ".${'tahunselesai'.$i};
+        break;
+    case "12":
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}." Desember ".${'tahunselesai'.$i};
+        break;
+    default:
+        ${'tanggalselesai'.$i}=${'hariselesai'.$i}."Bulan".${'tahunselesai'.$i};
+}
+
+}
 for($i=1; $i<=10; $i++){
-     // $NIP = ${'NIP'.$i}; 
-   // if($NIP==''){
-
+//bikin variabel supaya ketika kosong tetep jalan
     ${'NIP'.$i} = "";
     ${'nama'.$i} = "";
     ${'no_karpeg'.$i} = "";
@@ -208,42 +216,12 @@ for($i=1; $i<=10; $i++){
     ${'pendidikan_tempat'.$i} = "";
     ${'pendidikan_jurusan'.$i} = "";
     ${'status'.$i} = "";
-// }
-// else{
-//     ${'nama'.$i} = "-";
-//     ${'no_karpeg'.$i} = "-";
-//     ${'jenis_kelamin'.$i} = "-";
-//     ${'agama'.$i} = "-";
-//     ${'tempat_lahir'.$i} = "-";
-//     ${'tanggal_lahir'.$i} = "-";
-//     ${'tmt_cpns'.$i} = "-";
-//     ${'tmt_pns'.$i} = "-";
-//     ${'tmt_pangkat_terakhir'.$i} = "-";
-//     ${'golongan'.$i} = "-";
-//     ${'jabatan'.$i} = "-";
-//     ${'unit_kerja'.$i} = "-";
-//     ${'instansi'.$i} = "-";
-//     ${'pendidikan_terakhir'.$i} = "-";
-//     ${'pendidikan_tahun_lulus'.$i} = "-";
-//     ${'pendidikan_univ'.$i} = "-";
-//     ${'pendidikan_tempat'.$i} = "-";
-//     ${'pendidikan_jurusan'.$i} = "-";
-//     ${'status'.$i} = "-";   
-// }
-
-}
-
-$jml_id = (isset($_POST['jml_id'])) ? $_POST['jml_id'] : '';
-
-if($jml_id==''){
-    $jml_id=1;
 }
 
 
 for($i=1; $i<=$jml_id; $i++){
     ${'NIP'.$i} = (isset($_POST['NIP'.$i])) ? $_POST['NIP'.$i] : '';
     ${'NIP'.$i} = trim(''.${'NIP'.$i});
-    //if (${'NIP'.$j}=='') ${'NIP'.$j} = "(no name)";   
 
 }
 
@@ -341,28 +319,12 @@ for($i=1; $i<=$jml_id; $i++){
         ${'status'.$i}="-";
     }
 
- // ${'nama'.$i} = $row["nama"];
- //    ${'no_karpeg'.$i} = $row["no_karpeg"];
- //    ${'jenis_kelamin'.$i} = $row["jenis_kelamin"];
- //    ${'agama'.$i} = $row["agama"];
- //    ${'tempat_lahir'.$i} = $row["tempat_lahir"];
- //    ${'tanggal_lahir'.$i} = $row["tanggal_lahir"];
- //    ${'tmt_cpns'.$i} = $row["tmt_cpns"];
- //    ${'tmt_pns'.$i} = $row["tmt_pns"];
- //    ${'tmt_pangkat_terakhir'.$i} = $row["tmt_pangkat_terakhir"];
- //    ${'golongan'.$i} = $row["golongan"];
- //    ${'jabatan'.$i} = $row["jabatan"];
- //    ${'unit_kerja'.$i} = $row["unit_kerja"];
- //    ${'instansi'.$i} = $row["instansi"];
- //    ${'pendidikan_terakhir'.$i} = $row["pendidikan_terakhir"];
- //    ${'pendidikan_tahun_lulus'.$i} = $row["pendidikan_tahun_lulus"];
- //    ${'pendidikan_univ'.$i} = $row["pendidikan_univ"];
- //    ${'pendidikan_tempat'.$i} = $row["pendidikan_tempat"];
- //    ${'pendidikan_jurusan'.$i} = $row["pendidikan_jurusan"];
- //    ${'status'.$i} = $row["status"];
-
+    if(${'lamacuti'.$i}==""){
+        ${'lamacuti'.$i}="-";
+    }
 
     $data[]=array(
+
         'nip' => ${'NIP'.$i},
         'nama' => ${'nama'.$i},
         'no_karpeg' => ${'no_karpeg'.$i},
@@ -383,25 +345,11 @@ for($i=1; $i<=$jml_id; $i++){
         'pendidikan_univ' => ${'pendidikan_univ'.$i},
         'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
         'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
-        'status' => ${'status'.$i});
+        'status' => ${'status'.$i},
+        'lamacuti' => ${'lamacuti'.$i});
 
 }
 
-/*
-// A recordset for merging tables
-$data = array();
-$data[] = array('rank'=> 'A', 'firstname'=>'Sandra' , 'name'=>'Hill'      , 'number'=>'1523d', 'score'=>200, 'email_1'=>'sh@tbs.com',  'email_2'=>'sandra@tbs.com',  'email_3'=>'s.hill@tbs.com');
-$data[] = array('rank'=> 'A', 'firstname'=>'Roger'  , 'name'=>'Smith'     , 'number'=>'1234f', 'score'=>800, 'email_1'=>'rs@tbs.com',  'email_2'=>'robert@tbs.com',  'email_3'=>'r.smith@tbs.com' );
-$data[] = array('rank'=> 'B', 'firstname'=>'William', 'name'=>'Mac Dowell', 'number'=>'5491y', 'score'=>130, 'email_1'=>'wmc@tbs.com', 'email_2'=>'william@tbs.com', 'email_3'=>'w.m.dowell@tbs.com' );
-
-// Other single data items
-$x_num = 3152.456;
-$x_pc = 0.2567;
-$x_dt = mktime(13,0,0,2,15,2010);
-$x_bt = true;
-$x_bf = false;
-$x_delete = 1;
-*/
 // -----------------
 // Load the template
 // -----------------

@@ -78,57 +78,152 @@
                       <div class="form-group" >
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             <input name="NIP1" placeholder="Masukkan NIP" id="NIP1" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip2">
-                       <label class="control-label" for="NIP2">Masukkan NIP</label>
-                            <input name="NIP2" placeholder="Masukkan NIP" id="NIP2" type="text" class="form-control" />
-                      </div>
-                      <div class="form-group" id="grpnip3">
-                       <label class="control-label" for="NIP3">Masukkan NIP</label>
-                            <input name="NIP3" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip4">
-                       <label class="control-label" for="NIP4">Masukkan NIP</label>
-                            <input name="NIP4" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip5">
-                       <label class="control-label" for="NIP5">Masukkan NIP</label>
-                            <input name="NIP5" placeholder="Masukkan NIP" id="NIP5" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip6">
-                       <label class="control-label" for="NIP6">Masukkan NIP</label>
-                            <input name="NIP6" placeholder="Masukkan NIP" id="NIP6" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip7">
-                       <label class="control-label" for="NIP7">Masukkan NIP</label>
-                            <input name="NIP7" placeholder="Masukkan NIP" id="NIP7" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip8">
-                       <label class="control-label" for="NIP8">Masukkan NIP</label>
-                            <input name="NIP8" placeholder="Masukkan NIP" id="NIP8" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip9">
-                       <label class="control-label" for="NIP9">Masukkan NIP</label>
-                            <input name="NIP9" placeholder="Masukkan NIP" id="NIP9" type="text" class="form-control"/>
-                      </div>
-                      <div class="form-group" id="grpnip10">
-                       <label class="control-label" for="NIP10">Masukkan NIP</label>
-                            <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
-                      </div>
+                      
 
                       <div class="form-group">
                        <label class="control-label">Tanggal Mulai</label>
-                            <input name="tanggalmulai" id="tanggalmulai" type="date" class="form-control"/>
+                            <input name="tanggalmulai1" id="tanggalmulai1" type="date" class="form-control"/>
                       </div>
 
                       <div class="form-group">
                        <label class="control-label">Lama Cuti (dalam hari)</label>
-                            <input name="lamacuti" id="lamacuti" type="text" class="form-control"/>
+                            <input name="lamacuti1" id="lamacuti1" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip2">
+                       <label class="control-label" for="NIP2">Masukkan NIP</label>
+                            <input name="NIP2" placeholder="Masukkan NIP" id="NIP2" type="text" class="form-control" />
+
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai2" id="tanggalmulai2" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti2" id="lamacuti2" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip3">
+                       <label class="control-label" for="NIP3">Masukkan NIP</label>
+                            <input name="NIP3" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
+
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai3" id="tanggalmulai3" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti3" id="lamacuti3" type="text" class="form-control"/>
+                      </div>
+
+                      </div>
+                      <div class="form-group" id="grpnip4">
+                       <label class="control-label" for="NIP4">Masukkan NIP</label>
+                            <input name="NIP4" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
+
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai4" id="tanggalmulai4" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti4" id="lamacuti4" type="text" class="form-control"/>
+                      </div>
+
+                      </div>
+
+                      <div class="form-group" id="grpnip5">
+                       <label class="control-label" for="NIP5">Masukkan NIP</label>
+                            <input name="NIP5" placeholder="Masukkan NIP" id="NIP5" type="text" class="form-control"/>
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai5" id="tanggalmulai5" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti5" id="lamacuti5" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip6">
+                       <label class="control-label" for="NIP6">Masukkan NIP</label>
+                            <input name="NIP6" placeholder="Masukkan NIP" id="NIP6" type="text" class="form-control"/>
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai6" id="tanggalmulai6" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti6" id="lamacuti6" type="text" class="form-control"/>
+                      </div>      
+                      </div>
+
+                      <div class="form-group" id="grpnip7">
+                       <label class="control-label" for="NIP7">Masukkan NIP</label>
+                            <input name="NIP7" placeholder="Masukkan NIP" id="NIP7" type="text" class="form-control"/>
+                                            <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai7" id="tanggalmulai7" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti7" id="lamacuti7" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip8">
+                       <label class="control-label" for="NIP8">Masukkan NIP</label>
+                            <input name="NIP8" placeholder="Masukkan NIP" id="NIP8" type="text" class="form-control"/>
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai8" id="tanggalmulai8" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti8" id="lamacuti8" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip9">
+                       <label class="control-label" for="NIP9">Masukkan NIP</label>
+                            <input name="NIP9" placeholder="Masukkan NIP" id="NIP9" type="text" class="form-control"/>
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai9" id="tanggalmulai9" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti9" id="lamacuti9" type="text" class="form-control"/>
+                      </div>
+                      </div>
+
+                      <div class="form-group" id="grpnip10">
+                       <label class="control-label" for="NIP10">Masukkan NIP</label>
+                            <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai10" id="tanggalmulai10" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti10" id="lamacuti10" type="text" class="form-control"/>
+                      </div>
                       </div>
 
 
-                      
-                        <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" style="float:right" />
+
+                      <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" style="float:right" />
                       
                        
                   </form>
@@ -175,11 +270,11 @@ $(document).ready(function() {
     } 
     else{
       $('#grpid').hide();
-      for(i=2; i<=10; i++){
-                                $('#grpnip'+i).hide();
-                              }
 
-                            }
+      for(i=2; i<=10; i++){
+        $('#grpnip'+i).hide();
+        }
+    }
     if($(this).val() == "cuti_umroh.odt" || $(this).val() == "cuti_besar.odt" || $(this).val() == "cuti_tahunan.odt" || $(this).val() == "cuti_alasan_penting.odt" || $(this).val() == "cuti_haji.odt" || $(this).val() == "ijin_cuti_sakit.odt" || $(this).val() == "ijin_cuti_bersalin.odt" || $(this).val() == "ijin_cuti_bersalin_naban.odt") {
       $('#tanggalmulai').show();
       $('#lamacuti').show();
@@ -188,7 +283,7 @@ $(document).ready(function() {
       $('#tanggalmulai').hide();
       $('#lamacuti').hide();
     } 
-                        });
+                                        });
 
                         $('#jml_id').on('change', function() {
                             if($(this).val() == "1" ) {
