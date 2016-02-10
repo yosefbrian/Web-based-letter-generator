@@ -83,14 +83,112 @@ $kepada = (isset($_POST['kepada'])) ? $_POST['kepada'] : '';
 $kepada = trim(''.$kepada);
 if ($kepada=='') $kepada = "(kepada)";
 
+$tanggalmulai = (isset($_POST['tanggalmulai'])) ? $_POST['tanggalmulai'] : '';
+$tanggalmulai = trim(''.$tanggalmulai);
+if ($tanggalmulai=='') $tanggalmulai = "(tanggal mulai)";
 
+$lamacuti = (isset($_POST['lamacuti'])) ? $_POST['lamacuti'] : '';
+$lamacuti = trim(''.$lamacuti);
+if ($lamacuti=='') $lamacuti = "";
+
+$tanggalselesai = date('Y-m-d',strtotime($tanggalmulai . "+" .$lamacuti. "days"));
+
+$harimulai = substr($tanggalmulai, 8,2);
+$bulanmulai = substr($tanggalmulai, 5,2);
+$tahunmulai = substr($tanggalmulai, 0,4);
+
+switch ($bulanmulai) {
+    case "01":
+        $tanggalmulai=$harimulai." Januari ".$tahunmulai;
+        break;
+    case "02":
+        $tanggalmulai=$harimulai." Februari ".$tahunmulai;
+        break;
+    case "03":
+        $tanggalmulai=$harimulai." Maret ".$tahunmulai;
+        break;
+     case "04":
+        $tanggalmulai=$harimulai." April ".$tahunmulai;
+        break;
+    case "05":
+        $tanggalmulai=$harimulai." Mei ".$tahunmulai;
+        break;
+    case "06":
+        $tanggalmulai=$harimulai." Juni ".$tahunmulai;
+        break;
+    case "07":
+        $tanggalmulai=$harimulai." Juli ".$tahunmulai;
+        break;
+    case "08":
+        $tanggalmulai=$harimulai." Agustus ".$tahunmulai;
+        break;
+    case "09":
+        $tanggalmulai=$harimulai." September ".$tahunmulai;
+        break;
+    case "10":
+        $tanggalmulai=$harimulai." Oktober ".$tahunmulai;
+        break;
+    case "11":
+        $tanggalmulai=$harimulai." November ".$tahunmulai;
+        break;
+    case "12":
+        $tanggalmulai=$harimulai." Desember ".$tahunmulai;
+        break;
+    default:
+        $tanggalmulai=$harimulai."Bulan".$tahunmulai;
+}
+
+$hariselesai = substr($tanggalselesai, 8,2);
+$bulanselesai = substr($tanggalselesai, 5,2);
+$tahunselesai = substr($tanggalselesai, 0,4);
+
+switch ($bulanselesai) {
+    case "01":
+        $tanggalselesai=$hariselesai." Januari ".$tahunselesai;
+        break;
+    case "02":
+        $tanggalselesai=$hariselesai." Februari ".$tahunselesai;
+        break;
+    case "03":
+        $tanggalselesai=$hariselesai." Maret ".$tahunselesai;
+        break;
+     case "04":
+        $tanggalselesai=$hariselesai." April ".$tahunselesai;
+        break;
+    case "05":
+        $tanggalselesai=$hariselesai." Mei ".$tahunselesai;
+        break;
+    case "06":
+        $tanggalselesai=$hariselesai." Juni ".$tahunselesai;
+        break;
+    case "07":
+        $tanggalselesai=$hariselesai." Juli ".$tahunselesai;
+        break;
+    case "08":
+        $tanggalselesai=$hariselesai." Agustus ".$tahunselesai;
+        break;
+    case "09":
+        $tanggalselesai=$hariselesai." September ".$tahunselesai;
+        break;
+    case "10":
+        $tanggalselesai=$hariselesai." Oktober ".$tahunselesai;
+        break;
+    case "11":
+        $tanggalselesai=$hariselesai." November ".$tahunselesai;
+        break;
+    case "12":
+        $tanggalselesai=$hariselesai." Desember ".$tahunselesai;
+        break;
+    default:
+        $tanggalselesai=$hariselesai."Bulan".$tahunselesai;
+}
 
 for($i=1; $i<=10; $i++){
      // $NIP = ${'NIP'.$i}; 
    // if($NIP==''){
 
     ${'NIP'.$i} = "";
-     ${'nama'.$i} = "";
+    ${'nama'.$i} = "";
     ${'no_karpeg'.$i} = "";
     ${'jenis_kelamin'.$i} = "";
     ${'agama'.$i} = "";

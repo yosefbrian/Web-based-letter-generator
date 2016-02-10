@@ -116,6 +116,16 @@
                             <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
                       </div>
 
+                      <div class="form-group">
+                       <label class="control-label">Tanggal Mulai</label>
+                            <input name="tanggalmulai" id="tanggalmulai" type="date" class="form-control"/>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="control-label">Lama Cuti (dalam hari)</label>
+                            <input name="lamacuti" id="lamacuti" type="text" class="form-control"/>
+                      </div>
+
 
                       
                         <input type="submit" name="btn_result" value="Cetak" class="btn btn-primary" style="float:right" />
@@ -170,6 +180,14 @@ $(document).ready(function() {
                               }
 
                             }
+    if($(this).val() == "cuti_umroh.odt" || $(this).val() == "cuti_besar.odt" || $(this).val() == "cuti_tahunan.odt" || $(this).val() == "cuti_alasan_penting.odt" || $(this).val() == "cuti_haji.odt" || $(this).val() == "ijin_cuti_sakit.odt" || $(this).val() == "ijin_cuti_bersalin.odt" || $(this).val() == "ijin_cuti_bersalin_naban.odt") {
+      $('#tanggalmulai').show();
+      $('#lamacuti').show();
+    }
+    else{
+      $('#tanggalmulai').hide();
+      $('#lamacuti').hide();
+    } 
                         });
 
                         $('#jml_id').on('change', function() {
