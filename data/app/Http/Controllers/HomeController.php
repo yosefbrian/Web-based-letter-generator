@@ -66,17 +66,39 @@ class HomeController extends Controller
      */
     public function store(Request $request) {
         // validation rules
-        $this->validate($request,
+       $pegawai = employees::all();
+       $yeah =0;
+       foreach ($pegawai as $pegawais) {
+           $gawai = $pegawais->nip;
+
+           if($_POST["nip"]==$gawai){
+            $yeah=$yeah+1;
+           }
+       }
+
+       if($yeah==0){
+       $this->validate($request,
                 [
                 'nip' => 'required', 
                 'nama' => 'required|min:4', 
                 'jenis_kelamin' => 'required|min:4',
                 ]); 
         
-        employees::create($request->all());
+
+        employees::create(
+             
+            $request->all()
+            );
          
         \Session::flash('flash_message', 'Pegawai baru telah ditambahkan');
         return redirect('/getData');
+        }
+
+        else{
+           
+            \Session::flash('error', 'Maaf, data sudah ada, gunakan edit untuk memperbarui. Mohon cek keberadaan data terlebih dahulu!');
+            return redirect('getData/employees/create');
+        }
     }
 
     /**

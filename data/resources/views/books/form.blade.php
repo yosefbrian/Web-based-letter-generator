@@ -96,7 +96,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('Tanggal Lahir', 'Tanggal Lahir') !!}
-    {!! Form::text('tanggal_lahir', $tanggal_lahir, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
+    {{ Form::text('date',$tanggal_lahir, array('id' => 'tanggal_lahir','class'=>'form-control','name'=>'tanggal_lahir','placeholder'=>'Masukkan Tanggal')) }}
 
     </div>
   </div>
@@ -119,13 +119,22 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('TMT CPNS', 'TMT CPNS') !!}
-    {!! Form::text('tmt_cpns', $tmt_cpns, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
+    {{ Form::text('date',$tmt_cpns, array('id' => 'tmt_cpns','class'=>'form-control','name'=>'tmt_cpns','placeholder'=>'Masukkan Tanggal')) }}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
+
+       <?php if(isset($book->tmt_pns)) {
+       $tmt_pns=substr($book->tmt_pns,0,11);
+      }
+            else{
+        $tmt_pns='';
+      }
+      ?>
+
     {!! Form::label('TMT PNS', 'TMT PNS') !!}
-    {!! Form::text('tmt_pns', null, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
+    {{ Form::text('date',$tmt_pns, array('id' => 'tmt_pns','class'=>'form-control','name'=>'tmt_pns','placeholder'=>'Masukkan Tanggal')) }}
     </div>
   </div>
   <div class="col-xs-4">
@@ -138,7 +147,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('TMT Pangkat Terakhir', 'TMT Pangkat Terakhir') !!}
-    {!! Form::text('tmt_pangkat_terakhir', $tmt_pangkat_terakhir, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
+    {{ Form::text('date',$tmt_pangkat_terakhir, array('id' => 'tmt_pangkat_terakhir','class'=>'form-control','name'=>'tmt_pangkat_terakhir','placeholder'=>'Masukkan Tanggal')) }}
     </div>
   </div>
 </div>
@@ -372,6 +381,19 @@ foreach($pilihan as $opsi){
 function goBack() {
     window.history.back();
 }
+</script>
+
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    
+    $( "#tanggal_lahir").datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#tmt_cpns").datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#tmt_pns").datepicker({dateFormat: 'dd/mm/yy'});
+    $( "#tmt_pangkat_terakhir").datepicker({dateFormat: 'dd/mm/yy'});
+    
+
+  });
 </script>
 @show
 

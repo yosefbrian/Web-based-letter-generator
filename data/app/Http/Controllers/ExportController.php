@@ -15,7 +15,7 @@ class ExportController extends Controller
     //
 public function export(){
 
-set_time_limit ( 3000 ); 
+set_time_limit ( 300000 ); 
 
     Excel::create('DataPegawai', function($excel) {
 
@@ -31,14 +31,14 @@ set_time_limit ( 3000 );
 public function import(){
 
 
-    set_time_limit ( 3000 );
+    set_time_limit ( 300000 );
 
     $results = Excel::load('uploads/DataPegawai.xls')->get();
 
     foreach ($results as $row) {
     
     employees::updateOrCreate(
-        ['id' => $row->id,
+        [
         'nip' => $row->nip],
         [        
         

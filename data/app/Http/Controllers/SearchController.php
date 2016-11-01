@@ -15,10 +15,17 @@ class SearchController extends Controller
 
 
         $kata_kunci = Request::input('kata_kunci');
+
+        if($kata_kunci==''){
+        	\Session::Flash('error', 'Keywords tidak boleh kosong');
+        	return redirect('/getData');
+        }
+
+        else{
         $employees = employees::where('nama', 'like', '%' . $kata_kunci . '%')->orWhere('nip', 'like', '%' . $kata_kunci . '%')->orWhere('unit_kerja', 'like', '%' . $kata_kunci . '%')->paginate(9);
          $employees->setPath('search');
         return View('books.search')->with('employees', $employees);
-        
+        }
 
     }
 }

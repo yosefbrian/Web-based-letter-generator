@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('head.style')
-<link rel="stylesheet" href="css/bootstrap-select.css">
+<link href="{{ URL::asset('css/bootstrap-select.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('css/jquery-ui-1.10.0.custom.css') }}" rel="stylesheet">
 @show
 
 
@@ -13,6 +14,16 @@
                       <span aria-hidden="true">&times;</span></button>
 
                   {{ Session::get('flash_message') }}
+              </div>
+              @endif
+</div>
+
+@if(Session::has('error'))
+              <div class="alert alert-danger alert-dismissible col-xs-12" role="alert">
+                  <button type="button" class="close btn-round col-xs-1" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span></button>
+
+                  {{ Session::get('error') }}
               </div>
               @endif
 </div>

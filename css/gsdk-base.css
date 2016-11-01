@@ -1082,10 +1082,10 @@ input.ct-red + span.switch-left, input.ct-red + span + label + span.switch-right
     box-shadow: none;
 }
 .panel-default > .panel-heading {
-    background-color: #5BCAFF;
-    background-color: rgba(91, 203, 255, 0.98);
-    border-color: #5BCAFF;
-	border-color: rgba(91, 203, 255, 0.98);
+    background-color: #313135;
+    
+    border-color: #313135;
+	
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.14);
 	color: #FFFFFF;
 	

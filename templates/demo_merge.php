@@ -22,7 +22,7 @@ $TBS->Plugin(TBS_INSTALL, OPENTBS_PLUGIN); // load the OpenTBS plugin
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "pegawai";
+$dbname = "fix_ui";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -92,15 +92,28 @@ if($jml_id==''){
 for($i=1; $i<=$jml_id; $i++){
 
 
-${'tanggalmulai'.$i} = (isset($_POST['tanggalmulai'.$i])) ? $_POST['tanggalmulai'.$i] : '';
-${'tanggalmulai'.$i} = trim(''.${'tanggalmulai'.$i});
-if (${'tanggalmulai'.$i}=='') ${'tanggalmulai'.$i} = "(tanggal mulai)";
+
+${'DOBDay'.$i} = (isset($_POST['DOBDay'.$i])) ? $_POST['DOBDay'.$i] : '';
+${'DOBDay'.$i} = trim(''.${'DOBDay'.$i});
+if (${'DOBDay'.$i}=='') ${'DOBDay'.$i} = "-";
+
+${'DOBMonth'.$i} = (isset($_POST['DOBMonth'.$i])) ? $_POST['DOBMonth'.$i] : '';
+${'DOBMonth'.$i} = trim(''.${'DOBMonth'.$i});
+if (${'DOBMonth'.$i}=='') ${'DOBMonth'.$i} = "-";
+
+${'DOBYear'.$i} = (isset($_POST['DOBYear'.$i])) ? $_POST['DOBYear'.$i] : '';
+${'DOBYear'.$i} = trim(''.${'DOBYear'.$i});
+if (${'DOBYear'.$i}=='') ${'DOBYear'.$i} = "-";
 
 ${'lamacuti'.$i} = (isset($_POST['lamacuti'.$i])) ? $_POST['lamacuti'.$i] : '';
 ${'lamacuti'.$i} = trim(''.${'lamacuti'.$i});
 if (${'lamacuti'.$i}=='') ${'lamacuti'.$i} = "";
 
-${'tanggalselesai'.$i} = date('Y-m-d',strtotime(${'tanggalmulai'.$i} . "+" .${'lamacuti'.$i}. "days"));
+${'tatanggal'.$i} = (string)${'DOBDay'.$i}."-".(string)${'DOBMonth'.$i}."-".(string)${'DOBYear'.$i};
+
+${'pengurang'.$i} = ${'lamacuti'.$i} -1;
+${'tanggalmulai'.$i} = date('Y-m-d',strtotime(${'tatanggal'.$i}));
+${'tanggalselesai'.$i} = date('Y-m-d',strtotime(${'tanggalmulai'.$i} . "+" .${'pengurang'.$i}. "days"));
 
 ${'harimulai'.$i} = substr(${'tanggalmulai'.$i}, 8,2);
 ${'bulanmulai'.$i} = substr(${'tanggalmulai'.$i}, 5,2);
@@ -230,6 +243,7 @@ $data=array();
 
 for($i=1; $i<=$jml_id; $i++){
 
+    $nomer = $i;
     $NIP = ${'NIP'.$i}; 
 
     $sql = "SELECT * FROM employees where nip = '$NIP'";
@@ -324,7 +338,7 @@ for($i=1; $i<=$jml_id; $i++){
     }
 
     $data[]=array(
-
+        'nomer' => ${'nomer'},
         'nip' => ${'NIP'.$i},
         'nama' => ${'nama'.$i},
         'no_karpeg' => ${'no_karpeg'.$i},
@@ -346,8 +360,9 @@ for($i=1; $i<=$jml_id; $i++){
         'pendidikan_tempat' => ${'pendidikan_tempat'.$i},
         'pendidikan_jurusan' => ${'pendidikan_jurusan'.$i},
         'status' => ${'status'.$i},
-        'lamacuti' => ${'lamacuti'.$i});
-
+        'lamacuti' => ${'lamacuti'.$i},
+        'tanggalmulai' => ${'tanggalmulai'.$i},
+        'tanggalselesai' => ${'tanggalselesai'.$i});
 }
 
 // -----------------
