@@ -4,24 +4,28 @@
 <link rel="stylesheet" href="css/bootstrap-select.css">
 @show
 
+@section('page.location')
+Buat Surat
+@endsection
+
 @section('side.content')
 <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
+          <a href="{{ url('/') }}">
             <i class="fa fa-files-o"></i>
             <span>Buat Surat</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="{{ url('/getData') }}">
             <i class="fa fa-dashboard"></i> <span>Data Pegawai</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
+            <li class="active"><a href="{{ url('getData/employees/create') }}"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -977,6 +981,8 @@
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
         <section class="col-lg-5 connectedSortable">
           <!-- Penjelasan -->
+
+          
           <div class="box box-default">
             <div class="box-header with-border">
               <h3 class="box-title">Petunjuk Penggunaan</h3>
@@ -989,16 +995,16 @@
             </div>
             <!-- /.box-header -->
             
-            <div class="col-xs-12 box-footer no-padding">
-              <ol class="nav nav-pills nav-stacked">
-                <li><a href="#">Pilih jenis surat yang akan dibuat</a></li>
-                <li><a href="#">Masukkan penerima surat</a></li>
-                <li><a href="#">Tentukan jumlah pegawai yang akan dibuatkan surat</a></li>
-                <li><a href="#"><b>Masukkan NIP pegawai yang akan dibuatkan surat</b></a></li>
-                <li><a href="#">Klik Cetak</a></li>
+            <div class="box-body">
+              <ol>
+                <li>Pilih jenis surat yang akan dibuat</li>
+                <li>Masukkan penerima surat</li>
+                <li>Tentukan jumlah pegawai yang akan dibuatkan surat</li>
+                <li><b>Masukkan NIP pegawai yang akan dibuatkan surat</b></li>
+                <li>Klik Cetak</li>
               </ol>
-        
             </div>
+            <!-- /.box-body -->
             <div class="col-xs-12 box-footer">
               <ul class="nav nav-pills nav-stacked">
                 <li><p>Setelah Anda memilih cetak maka file akan otomatis terunduh melalui browser yang Anda gunakan saat ini.</p></li>
