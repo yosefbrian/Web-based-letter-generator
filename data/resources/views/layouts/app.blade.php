@@ -143,7 +143,6 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
-      ini adalah bagian side
       @yield('side.content')
   
       
@@ -161,15 +160,22 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">@yield('page.location')</li>
       </ol>
     </section>
 
     <!-- Main content -->
+    
     <section class="content">
+      
       @yield('alert')
-      ini bagian menu
+      
+      
       @yield('content')
+      
+      
+      
+      
     </section>
     <!-- /.content -->
   </div>
@@ -218,10 +224,7 @@
 <script src="{{ URL::asset('plugins/fastclick/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ URL::asset('dist/js/app.min.js') }}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ URL::asset('dist/js/pages/dashboard.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ URL::asset('dist/js/demo.js') }}"></script>
+
 <!-- JavaScripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
