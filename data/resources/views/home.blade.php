@@ -220,8 +220,17 @@ Buat Surat
 
                       <div class="form-group" id="grpnip2">
                       <hr>
-                       <label class="control-label" for="NIP2">Masukkan NIP</label>
-                            <input name="NIP2" placeholder="Masukkan NIP" id="NIP2" type="text" class="form-control" />
+                       <label class="control-label" for="NIP">Masukkan NIP</label>
+                            
+                            <select name="NIP2" placeholder="Masukkan NIP" id="NIP2"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
 
                       <div class="form-group" id="grptanggal2">
                        <label class="control-label">Tanggal Mulai Cuti</label>
@@ -306,8 +315,17 @@ Buat Surat
 
                       <div class="form-group" id="grpnip3">
                       <hr>
-                       <label class="control-label" for="NIP3">Masukkan NIP</label>
-                            <input name="NIP3" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
+                      <label class="control-label" for="NIP3">Masukkan NIP</label>
+                            
+                            <select name="NIP3" placeholder="Masukkan NIP" id="NIP3"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
 
                       <div class="form-group" id="grptanggal3">
                        <label class="control-label">Tanggal Mulai Cuti</label>
@@ -393,8 +411,16 @@ Buat Surat
 
                       <div class="form-group" id="grpnip4">
                       <hr>
-                       <label class="control-label" for="NIP4">Masukkan NIP</label>
-                            <input name="NIP4" placeholder="Masukkan NIP" id="NIP3" type="text" class="form-control"/>
+                      <label class="control-label" for="NIP">Masukkan NIP</label>
+                            
+                            <select name="NIP4" placeholder="Masukkan NIP" id="NIP4"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
 
                       <div class="form-group" id="grptanggal4">
                        <label class="control-label">Tanggal Mulai Cuti</label>
@@ -478,8 +504,17 @@ Buat Surat
 
                       <div class="form-group" id="grpnip5">
                       <hr>
-                       <label class="control-label" for="NIP5">Masukkan NIP</label>
-                            <input name="NIP5" placeholder="Masukkan NIP" id="NIP5" type="text" class="form-control"/>
+                       <label class="control-label" for="NIP">Masukkan NIP</label>
+                            
+                            <select name="NIP5" placeholder="Masukkan NIP" id="NIP5"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal5">
                       <label class="control-label">Tanggal Mulai Cuti</label>
 <br>
@@ -561,8 +596,17 @@ Buat Surat
 
                       <div class="form-group" id="grpnip6">
                       <hr>
-                       <label class="control-label" for="NIP6">Masukkan NIP</label>
-                            <input name="NIP6" placeholder="Masukkan NIP" id="NIP6" type="text" class="form-control"/>
+                       <label class="control-label" for="NIP">Masukkan NIP</label>
+                            
+                            <select name="NIP6" placeholder="Masukkan NIP" id="NIP6"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal6">
                        <label class="control-label">Tanggal Mulai Cuti</label>
 <br>
@@ -645,7 +689,16 @@ Buat Surat
                       <div class="form-group" id="grpnip7">
                       <hr>
                        <label class="control-label" for="NIP7">Masukkan NIP</label>
-                            <input name="NIP7" placeholder="Masukkan NIP" id="NIP7" type="text" class="form-control"/>
+                            
+                            <select name="NIP7" placeholder="Masukkan NIP" id="NIP7"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal7">
                         <label class="control-label">Tanggal Mulai Cuti</label>
 <br>
@@ -727,8 +780,17 @@ Buat Surat
 
                       <div class="form-group" id="grpnip8">
                       <hr>
-                       <label class="control-label" for="NIP8">Masukkan NIP</label>
-                            <input name="NIP8" placeholder="Masukkan NIP" id="NIP8" type="text" class="form-control"/>
+                      <label class="control-label" for="NIP8">Masukkan NIP</label>
+                            
+                            <select name="NIP8" placeholder="Masukkan NIP" id="NIP8"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal8">
                        <label class="control-label">Tanggal Mulai Cuti</label>
                     <br>
@@ -811,7 +873,16 @@ Buat Surat
                       <div class="form-group" id="grpnip9">
                       <hr>
                        <label class="control-label" for="NIP9">Masukkan NIP</label>
-                            <input name="NIP9" placeholder="Masukkan NIP" id="NIP9" type="text" class="form-control"/>
+                            
+                            <select name="NIP9" placeholder="Masukkan NIP" id="NIP9"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal9">
                        <label class="control-label">Tanggal Mulai Cuti</label>
 <br>
@@ -894,7 +965,16 @@ Buat Surat
                       <div class="form-group" id="grpnip10">
                       <hr>
                        <label class="control-label" for="NIP10">Masukkan NIP</label>
-                            <input name="NIP10" placeholder="Masukkan NIP" id="NIP10" type="text" class="form-control"/>
+                            
+                            <select name="NIP10" placeholder="Masukkan NIP" id="NIP10"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal10">
                        <label class="control-label">Tanggal Mulai Cuti</label>
                       <br>
