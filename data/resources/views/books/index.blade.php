@@ -3,7 +3,7 @@
 
 @section('content.getData')
 
-<div class="col-xs-12"><a href="{{ url('getData/employees/create') }}" title="Tambah" class="btn btn-default btn-fill">Tambah Pegawai</a>
+<div class="col-xs-12">
   <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
     
