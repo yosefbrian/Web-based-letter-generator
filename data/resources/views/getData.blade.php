@@ -29,7 +29,13 @@ Data Pegawai
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="{{ url('getData/employees/create') }}"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
+            <li class="active"><a href="{{ url('getData/employees/create') }}"><i class="fa fa-circle-o"></i>Tambah Data Manual</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="active"><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-circle-o"></i>Upload Data Excel</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="active"><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-circle-o"></i>Download Data Excel</a></li>
           </ul>
         </li>
         <li class="treeview">
