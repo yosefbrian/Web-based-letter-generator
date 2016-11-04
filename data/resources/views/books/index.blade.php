@@ -46,7 +46,7 @@
 
                     <td><a class="btn btn-primary" data-placement="bottom" title="Lihat Data" data-toggle="modal" data-id ="book->id" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
 
-                    <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
+                    <div class="modal modal-default fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -292,9 +292,10 @@
                                 </div>
                                 </div>
                                 <div class="modal-footer">
+                                  <div class="pull-right">
                                     <button type="button" title="Kembali" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
-                                    <div class="divider"></div>
                                     <a class="btn btn-warning btn-simple" title="Hapus" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -319,9 +320,11 @@
                                     <h5>Apakah Anda yakin akan menghapus data ini?</h5>
                                 </div>
                                 <div class="modal-footer">
+                                  <div class="pull-right">
                                     <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
-                                    <div class="divider"></div>
+                                    
                                     <a class="btn btn-danger btn-simple" title="Hapus" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -134,7 +134,7 @@
       
       @yield('content')
       
-      <div class="modal modal-info" id="modalimport">
+      <div class="modal modal-info fade" id="modalimport">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

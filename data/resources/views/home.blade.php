@@ -33,7 +33,6 @@ Buat Surat
           <ul class="treeview-menu">
             <li class="active"><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-circle-o"></i>Download Data Excel</a></li>
           </ul>
-          
         </li>
         <li class="treeview">
           <a href="#">

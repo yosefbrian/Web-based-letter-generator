@@ -36,7 +36,7 @@
                     <td>{{ $book->nama }}</td>
                     <td>{{ $book->unit_kerja }}</td>                
                    <td><a class="btn btn-primary" data-toggle="modal" data-placement="bottom" title="Lihat Data"  data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
-                   <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
+                   <div class="modal modal-default fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -49,7 +49,7 @@
                                     <input type="hidden" value="<?php echo $book->id;?>" name="id">
                                     <div class="panel panel-group">
                                         <div class="panel-body">
-                                            <div class="row col-md-10">
+                                            <div class="row col-md-10 col-md-offset-1">
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <label class="col-sm-6"><div class="pull-right">&nbsp;</div></label>
@@ -282,9 +282,10 @@
                                 </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
-                                    <div class="divider"></div>
-                                    <a class="btn btn-warning btn-simple" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                  <div class="pull-right">
+                                    <button type="button" title="Kembali" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
+                                    <a class="btn btn-warning btn-simple" title="Hapus" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +294,7 @@
                     <td><a class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit Data"  href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
                      <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modal" data-placement="bottom" title="Hapus Data"><span class="glyphicon glyphicon-trash"></a></td>
                     </tr>   
-                        <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+                        <div class="modal modal-warning fade" id="modal" tabindex="-1" role="dialog">
                             <div class="modal-dialog modal-sm" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -307,9 +308,11 @@
                                         <h5>Apakah Anda yakin akan menghapus data ini ?</h5>
                                     </div>
                                     <div class="modal-footer">
+                                      <div class="pull-right">
                                       <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
-                                      <div class="divider"></div>
+                                      
                                       <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                      </div>
                                     </div>
                                 </div>
                             </div>
