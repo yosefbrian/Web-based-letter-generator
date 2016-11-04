@@ -1,9 +1,9 @@
 @extends('getData')
 
+
 @section('content.getData')
 
 <div class="col-xs-12">
-  <a class="btn btn-primary" style="font-size: 12pt" onclick="goBack()">Kembali</a>
 
   <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  

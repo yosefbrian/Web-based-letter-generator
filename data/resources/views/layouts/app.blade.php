@@ -71,45 +71,26 @@
               @if (Auth::guest())
                 <a href="{{ url('/login') }}">Login</a>
               @else
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <i class="fa fa-gears"></i>
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
-            <ul class="dropdown-menu" role="menu">      
-                <li><a data-placement="bottom" title="Download Database Pegawai" href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Download Data</a></li>
-                <li><a data-placement="bottom" title="Tambah Database Pegawai" href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Upload Data</a></li>
-                <div class="divider"></div>
-                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+            
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-body">
+                <h4>Sistem Informasi Persuratan</h4>
+                <small>Version 2.0</small>
+                
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="{{ url('/logout') }}" class="fa fa-btn fa-sign-out">Logout</a>
+                </div>
+              </li>
             </ul>
+
           </li>
-          <div class="modal fade" id="modalimport" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h4 class="modal-title"><b>Unggah Data</b></h4>
-                </div>
-                <div class="modal-body">
-                  <div class="col-xs-12">                          
-                    <label for="fileToUpload">Import file excel (xls)</label>
-                    <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data" >                                     
-                      <div class="col-xs-8 col-md-offset-1">
-                        <input type="file" class="btn btn-default btn-file" name="fileToUpload" id="fileToUpload" required="required">
-                      </div>
-                      <div class="col-xs-3">
-                        <input type="submit" class="btn btn-success" value="Upload" name="submit">
-                        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-                      </div>
-                  </form>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
-                </div>
-                </div>
-              </div>
-            </div>
                   @endif
         </ul>
       </div>
@@ -152,6 +133,36 @@
       
       
       @yield('content')
+      
+      <div class="modal modal-info" id="modalimport">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Upload Data Excel</h4>
+              </div>
+              <div class="modal-body col-xs-12">
+                <label for="fileToUpload">Import file excel (xls)</label>
+                
+                <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data" >                                     
+
+                    <input type="file" class="btn btn-default btn-file pull-left col-xs-10" name="fileToUpload" id="fileToUpload" required="required">
+
+                      <input type="submit" class="btn btn-primary pull-right" value="Upload" name="submit">
+                      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+
+                </form>
+              </div>
+              <div class="modal-footer col-xs-12">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
       
       
       
