@@ -1090,9 +1090,13 @@ Buat Surat
             <div class="box-body">
               <ol>
                 <li>Pilih jenis surat yang akan dibuat</li>
+                <br>
                 <li>Masukkan penerima surat</li>
+                <br>
                 <li>Tentukan jumlah pegawai yang akan dibuatkan surat</li>
+                <br>
                 <li><b>Masukkan NIP pegawai yang akan dibuatkan surat</b></li>
+                <br>
                 <li>Klik Cetak</li>
               </ol>
             </div>
