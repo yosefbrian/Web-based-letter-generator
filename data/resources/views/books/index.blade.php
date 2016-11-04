@@ -8,7 +8,6 @@
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
     
     <div class="col-xs-9">{!! Form::text('kata_kunci',null,['class'=>'form-control','placeholder'=>'Keywords']) !!}</div>
-<!--    <button class="btn btn-round glyphicon glyphicon-search" type="submit"></button>-->
     <button type="submit" class="btn btn-default"><span class="fa fa-search"></span></button>
   {!! Form::close() !!}
   </div>
@@ -305,7 +304,7 @@
                     <td><a class="btn btn-warning" data-placement="bottom" title="Edit Data" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
                     <td><a class="btn btn-danger" data-placement="bottom" title="Hapus Data" data-toggle="modal" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
 
-                    <div class="modal fade" id="modaldelete" tabindex="-1" role="dialog">
+                    <div class="modal modal-warning fade" id="modaldelete" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">

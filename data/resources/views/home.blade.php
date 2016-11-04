@@ -190,8 +190,19 @@ Buat Surat
                           </div>
                           
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti1" id="lamacuti1" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti1" id="lamacuti1" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -276,8 +287,19 @@ Buat Surat
                       
 
                       
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti2" id="lamacuti2" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti2" id="lamacuti2" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -362,8 +384,19 @@ Buat Surat
                       
 
                       
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti3" id="lamacuti3" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti3" id="lamacuti3" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
 
                       </div>
@@ -447,8 +480,19 @@ Buat Surat
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti4" id="lamacuti4" type="text" class="form-control"/>
+                      <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti4" id="lamacuti4" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
 
                       </div>
@@ -531,8 +575,19 @@ Buat Surat
                           </select>
                           </div>
                       
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti5" id="lamacuti5" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti5" id="lamacuti5" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -615,7 +670,18 @@ Buat Surat
                           </div>
                       
                        <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti6" id="lamacuti6" type="text" class="form-control"/>
+                        <select name="lamacuti6" id="lamacuti6" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>      
                       </div>
 
@@ -697,8 +763,19 @@ Buat Surat
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti7" id="lamacuti7" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti7" id="lamacuti7" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -780,8 +857,19 @@ Buat Surat
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti8" id="lamacuti8" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti8" id="lamacuti8" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -863,8 +951,19 @@ Buat Surat
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti9" id="lamacuti9" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti9" id="lamacuti9" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
@@ -946,8 +1045,19 @@ Buat Surat
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti (hanya angka)</label>
-                            <input name="lamacuti10" id="lamacuti10" type="text" class="form-control"/>
+                       <label class="control-label">Lama Cuti</label>
+                        <select name="lamacuti10" id="lamacuti10" class="form-control selectpicker" title="Pilih Angka">
+                         <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
                       </div>
                       </div>
 
