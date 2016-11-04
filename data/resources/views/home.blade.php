@@ -123,9 +123,21 @@ Buat Surat
 
 
                       <div class="form-group">
-                       <label class="control-label" for="NIP">Masukkan NIP</label>
-                            <input name="NIP1" placeholder="Masukkan NIP" id="NIP1" type="text" class="form-control"/>
+                       <!-- <label class="control-label" for="NIP">Masukkan NIP</label>
+                            <input name="NIP1" placeholder="Masukkan NIP" id="NIP1" type="text" class="form-control"/> -->
                       
+
+                            <label class="control-label" for="NIP">Masukkan NIP</label>
+                            
+                            <select name="NIP1" placeholder="Masukkan NIP" id="NIP1"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                        @foreach ($employeList as $book)
+                             <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
+
+                            @endforeach
+
+
+                            </select>
+
                       <div class="form-group" id="grptanggal1">
                        <label class="control-label">Tanggal Mulai Cuti</label>
                         <br>
