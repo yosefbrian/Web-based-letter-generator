@@ -1,5 +1,9 @@
 @extends('getData')
 
+@section('page.location')
+<li class="active">Sunting Data</li>
+<li class="active">Search</li>
+@overwrite
 
 @section('content.getData')
 

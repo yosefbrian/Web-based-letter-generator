@@ -1,5 +1,9 @@
 @extends('getData')
 
+@section('page.location')
+<li class="active">Sunting Data Perorang</li>
+@overwrite
+
 @section('content.getData')
 <div>
 <h3>Perbarui Data Pegawai</h3>

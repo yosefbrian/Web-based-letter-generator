@@ -1,3 +1,8 @@
+@section('page.location')
+<li class="active">Sunting Data</li>
+<li class="active">Tambah Data Manual</li>
+@overwrite
+
 @section('side.content')
     <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>

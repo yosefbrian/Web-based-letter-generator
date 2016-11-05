@@ -6,7 +6,7 @@
 @show
 
 @section('page.location')
-Data Pegawai
+<li class="active">Lihat Data</li>
 @endsection
 
 

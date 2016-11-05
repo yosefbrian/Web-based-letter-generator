@@ -5,8 +5,8 @@
 @show
 
 @section('page.location')
-Buat Surat
-@endsection
+<li class="active">Buat Surat</li>
+@overwrite
 
 @section('side.content')
     <ul class="sidebar-menu">
