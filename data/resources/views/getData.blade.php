@@ -13,17 +13,23 @@ Data Pegawai
 
 
 @section('side.content')
-<ul class="sidebar-menu">
+    <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="{{ url('/') }}">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-envelope-o"></i>
             <span>Buat Surat</span>
           </a>
         </li>
         <li class="active treeview">
           <a href="{{ url('/getData') }}">
-            <i class="fa fa-dashboard"></i> <span>Data Pegawai</span>
+            <i class="fa fa-database"></i>
+            <span>Lihat Data</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Sunting Data</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
