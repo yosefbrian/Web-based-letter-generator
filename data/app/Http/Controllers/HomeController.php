@@ -27,9 +27,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   public function index()
     {
-        return view('home');
+        $employeList = employees::all();
+        return view('home')->with('employeList', $employeList);
     }
   
   /**

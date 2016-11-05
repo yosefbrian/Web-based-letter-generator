@@ -4,10 +4,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SIM Persuratan</title>
-  <meta name="author" content="Vinsensius Satya, Yosef Brian, Misbach Imaduddin">
-
-  <link href="{{ URL::asset('img/favicon.ico') }}" rel="shortcut icon" />  
-  
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -56,9 +52,9 @@
     <!-- Logo -->
     <a href="{{ url('/') }}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>IP</span>
+      <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SIM</b>PLE</span>
+      <span class="logo-lg"><b>Admin</b>LTE</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -77,26 +73,45 @@
               @if (Auth::guest())
                 <a href="{{ url('/login') }}">Login</a>
               @else
-              <i class="fa fa-gears"></i>
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">{{ Auth::user()->name }}</span>
             </a>
-            
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-body">
-                <h4>Sistem Informasi Persuratan</h4>
-                <small>Version 2.0</small>
-                
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-right">
-                  <a href="{{ url('/logout') }}" class="fa fa-btn fa-sign-out">Logout</a>
-                </div>
-              </li>
+            <ul class="dropdown-menu" role="menu">      
+                <li><a data-placement="bottom" title="Download Database Pegawai" href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Download Data</a></li>
+                <li><a data-placement="bottom" title="Tambah Database Pegawai" href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Upload Data</a></li>
+                <div class="divider"></div>
+                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
             </ul>
-
           </li>
+          <div class="modal fade" id="modalimport" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title"><b>Unggah Data</b></h4>
+                </div>
+                <div class="modal-body">
+                  <div class="col-xs-12">                          
+                    <label for="fileToUpload">Import file excel (xls)</label>
+                    <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data" >                                     
+                      <div class="col-xs-8 col-md-offset-1">
+                        <input type="file" class="btn btn-default btn-file" name="fileToUpload" id="fileToUpload" required="required">
+                      </div>
+                      <div class="col-xs-3">
+                        <input type="submit" class="btn btn-success" value="Upload" name="submit">
+                        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                      </div>
+                  </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
+                </div>
+                </div>
+              </div>
+            </div>
                   @endif
         </ul>
       </div>
@@ -107,10 +122,8 @@
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-<<<<<<< HEAD
-=======
       <!-- Sidebar user panel -->
-      <!-- <div class="user-panel">
+      <div class="user-panel">
         <div class="pull-left image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
@@ -118,9 +131,9 @@
           <p>Alexander Pierce</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div> -->
+      </div>
       <!-- search form -->
-      <!-- <form action="#" method="get" class="sidebar-form">
+      <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
               <span class="input-group-btn">
@@ -128,8 +141,7 @@
                 </button>
               </span>
         </div>
-      </form> -->
->>>>>>> origin/master
+      </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
@@ -163,36 +175,6 @@
       
       @yield('content')
       
-      <div class="modal modal-info fade" id="modalimport">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Upload Data Excel</h4>
-              </div>
-              <div class="modal-body col-xs-12">
-                <label for="fileToUpload">Import file excel (xls)</label>
-                
-                <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data" >                                     
-
-                    <input type="file" class="btn btn-default btn-file pull-left col-xs-10" name="fileToUpload" id="fileToUpload" required="required">
-
-                      <input type="submit" class="btn btn-primary pull-right" value="Upload" name="submit">
-                      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-
-                </form>
-              </div>
-              <div class="modal-footer col-xs-12">
-                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
-      
       
       
       
@@ -203,9 +185,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.0
+      <b>Version</b> 2.3.7
     </div>
-    <strong>Copyright &copy; 2016 <a href="http://ybrian.net">KODKOD</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -214,7 +196,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="{{ URL::asset('plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -246,6 +228,7 @@
 <script src="{{ URL::asset('dist/js/app.js') }}"></script>
 
 <!-- JavaScripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   // enable the option for savegin as a file, the PHP script will test if it is running on localhost anyway.
