@@ -52,9 +52,9 @@
     <!-- Logo -->
     <a href="{{ url('/') }}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>IP</span>
+      <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SIM</b>PLE</span>
+      <span class="logo-lg"><b>Admin</b>LTE</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -123,7 +123,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <!-- <div class="user-panel">
+      <div class="user-panel">
         <div class="pull-left image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
@@ -131,9 +131,9 @@
           <p>Alexander Pierce</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div> -->
+      </div>
       <!-- search form -->
-      <!-- <form action="#" method="get" class="sidebar-form">
+      <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
               <span class="input-group-btn">
@@ -141,7 +141,7 @@
                 </button>
               </span>
         </div>
-      </form> -->
+      </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       
@@ -185,9 +185,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.0
+      <b>Version</b> 2.3.7
     </div>
-    <strong>Copyright &copy; 2016 <a href="http://ybrian.net">KODKOD</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -228,6 +228,7 @@
 <script src="{{ URL::asset('dist/js/app.js') }}"></script>
 
 <!-- JavaScripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   // enable the option for savegin as a file, the PHP script will test if it is running on localhost anyway.
