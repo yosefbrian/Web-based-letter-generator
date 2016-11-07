@@ -239,7 +239,7 @@
                       <hr>
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
-                            <select name="NIP2" placeholder="Masukkan NIP" id="NIP2"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP2" placeholder="Masukkan NIP" id="NIP2"  id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -356,7 +356,7 @@
                       <hr>
                       <label class="control-label" for="NIP3">Masukkan NIP</label>
                             
-                            <select name="NIP3" placeholder="Masukkan NIP" id="NIP3"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP3" placeholder="Masukkan NIP" id="NIP3"   id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -474,7 +474,7 @@
                       <hr>
                       <label class="control-label" for="NIP">Masukkan NIP</label>
                             
-                            <select name="NIP4" placeholder="Masukkan NIP" id="NIP4"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP4" placeholder="Masukkan NIP" id="NIP4"   id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -589,7 +589,7 @@
                       <hr>
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
-                            <select name="NIP5" placeholder="Masukkan NIP" id="NIP5"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP5" placeholder="Masukkan NIP" id="NIP5"   id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -703,7 +703,7 @@
                       <hr>
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
-                            <select name="NIP6" placeholder="Masukkan NIP" id="NIP6"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP6" placeholder="Masukkan NIP" id="NIP6" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -817,7 +817,7 @@
                       <hr>
                        <label class="control-label" for="NIP7">Masukkan NIP</label>
                             
-                            <select name="NIP7" placeholder="Masukkan NIP" id="NIP7"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP7" placeholder="Masukkan NIP" id="NIP7"  id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -931,7 +931,7 @@
                       <hr>
                       <label class="control-label" for="NIP8">Masukkan NIP</label>
                             
-                            <select name="NIP8" placeholder="Masukkan NIP" id="NIP8"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP8" placeholder="Masukkan NIP" id="NIP8"  id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -1045,7 +1045,7 @@
                       <hr>
                        <label class="control-label" for="NIP9">Masukkan NIP</label>
                             
-                            <select name="NIP9" placeholder="Masukkan NIP" id="NIP9"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP9" placeholder="Masukkan NIP" id="NIP9"  id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                         <?php  
 
                             $i = 0;
@@ -1159,7 +1159,7 @@
                       <hr>
                        <label class="control-label" for="NIP10">Masukkan NIP</label>
                             
-                            <select name="NIP10" placeholder="Masukkan NIP" id="NIP10"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
+                            <select name="NIP10" placeholder="Masukkan NIP" id="NIP10"   id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
                       <?php  
 
                             $i = 0;
