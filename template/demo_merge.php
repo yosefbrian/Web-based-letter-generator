@@ -370,6 +370,35 @@ for($i=1; $i<=$jml_id; $i++){
 // -----------------
 
 $template = (isset($_POST['tpl'])) ? $_POST['tpl'] : '';
+
+$pgw_id;
+$nama_pgw;
+$query = "SELECT * FROM `employees` WHERE `nip` = '$nip'";
+$result_pgwid = $conn->query($query);
+if ($result_pgwid->num_rows>0){
+    while ($row = $result_pgwid->fetch_assoc()) {
+        $pgw_id = $row['nip'];
+        $nama_pgw = $row['nama'];
+    }
+} else{}
+
+$nama_surat;
+$query = "SELECT `nama_surat` FROM `template_surat` WHERE `filename` = '$template'";
+$result_surat = $conn->query($query);
+if ($result_surat->num_rows>0) {
+    while ($row = $result_surat->fetch_assoc()) {
+        $nama_surat = $row['nama_surat'];
+    }
+}
+
+$nomor_surat = rand(100,199);
+
+$tang = date("Y-m-d");
+
+$query = "INSERT INTO `record`(`tanggal_surat`, `nip`, `nama_pegawai`, `nama_surat`, `no_surat`, `status`,`created_at`) VALUES ('$tanggal', '$pgw_id', '$nama_pgw', '$nama_surat','$nomor_surat', 'Processing','$tang')";
+$result_insert = $conn->query($query);
+
+
 $TBS->LoadTemplate($template, OPENTBS_ALREADY_UTF8); // Also merge some [onload] automatic fields (depends of the type of document).
 $TBS->MergeBlock('a', $data);
 /*
