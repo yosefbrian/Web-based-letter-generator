@@ -141,7 +141,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal1">
@@ -256,7 +256,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
 
@@ -373,7 +373,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
 
@@ -491,7 +491,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal4">
@@ -606,7 +606,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal5">
@@ -720,7 +720,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal6">
@@ -834,7 +834,7 @@
                                 break;
                               }
                             ?>  
-
+@endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal7">
@@ -948,7 +948,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal8">
@@ -1062,7 +1062,7 @@
                                 break;
                               }
                             ?>  
-
+                          @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal9">
@@ -1176,7 +1176,7 @@
                                 break;
                               }
                             ?>  
-
+                            @endforeach
                             </select>
 
                       <div class="form-group" id="grptanggal10">
