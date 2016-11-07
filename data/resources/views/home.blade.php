@@ -72,30 +72,9 @@
                       <label class="control-label" for="lunch">Jenis Surat</label>
                       <div class="form-group">
                       <select required="required" id="surat" name="tpl" class="form-control selectpicker" data-live-search="true" title="Pilih Jenis Surat" >
-                        <option value="cuti_besar.odt">Cuti Besar</option>
-                        <option value="cuti_haji.odt">Cuti Haji</option>
-                        <option value="cuti_umroh.odt">Cuti Umroh</option>
-                        <option value="cuti_alasan_penting.odt">Cuti Alasan Penting</option>
-                        <option value="cuti_tahunan.odt">Cuti Tahunan</option>
-                        <option value="ijin_belajar.odt">Ijin Belajar</option>
-                        <option value="ijin_cuti_bersalin_naban.odt">Ijin Cuti Bersalin Naban</option>
-                        <option value="ijin_cuti_bersalin.odt">Ijin Cuti Bersalin</option>
-                        <option value="ijin_cuti_sakit.odt">Ijin Cuti Sakit</option>
-                        <option value="pengajuan_taspen.odt">Pengajuan Taspen</option>
-                        <option value="pensiun_janda.odt">Pensiun Janda</option>
-                        <option value="permohonan_pensiun.odt">Permohonan Pensiun</option>
-                        <option value="pemberian_kenaikan_gaji.odt">Pemberian Kenaikan Gaji</option>
-                        <option value="plt(penunjukkan).odt">PLT(Penunjukkan)</option>
-                        <option value="rekomendasi.odt">Rekomendasi KA Dinas</option>
-                        <option value="seleksi_masuk_perguruan_tinggi.odt">Seleksi Masuk Perguruan Tinggi</option>
-                        <option value="SPMJ.odt">SPMJ(Surat Pernyataan Telah Menduduki Jabatan</option>
-                        <option value="SPMT.odt">SPMT(Surat Pernyataan Melakukan Tugas</option>
-                        <option value="SPPD.odt">SPPD(Surat Perintah Perjalanan Dinas)</option>
-                        <option value="keterangan_anak_yatim.odt">Keterangan Anak Yatim</option>
-                        <option value="keterangan_tidak_dihukum.odt">Keterangan Sedang Tidak Menjalani Hukuman</option>
-                        <option value="laporan_kematian.odt">Laporan Kematian</option>
-                        <option value="pembatalan_permohonan_cuti.odt">Pembatalan Permohonan Cuti Besar</option>
-                        <option value="surat_tugas.odt">Surat Perintah Tugas</option>
+                        @foreach($namasurat as $nSurat)
+                          <option value="{{ $nSurat->filename }}">{{ $nSurat->nama_surat }}</option>
+                        @endforeach
 
                       </select>
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\employees as employees;
 use Carbon\Carbon;
+use App\Templatesurat;
 use Illuminate\Session;
 //use Illuminate\Support\Facades\Request;
 
@@ -30,7 +31,8 @@ class HomeController extends Controller
    public function index()
     {
         $employeList = employees::all();
-        return view('home')->with('employeList', $employeList);
+        $namasurat = Templatesurat::get();
+        return view('home')->with('employeList', $employeList)->with('namasurat', $namasurat);
     }
   
   /**
