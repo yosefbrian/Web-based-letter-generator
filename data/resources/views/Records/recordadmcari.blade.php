@@ -48,14 +48,22 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 ">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
-                    <div class="panel-body">
 
-                        <form action="{{ url('/logcari') }}" method="get">
+<!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Data Pegawai</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row"> 
+                <div class="col-xs-12">
+                 
+                  <form action="{{ url('/logcari') }}" method="get">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" >
                             <input class="form-control pull-left" type="text" name="mhs" id="mhs" placeholder="cari.." style="width: 200px; height:30px; margin-top: 2px;margin-right:10px"></input>
                             <input class="btn btn-default pull-left" type="submit" value="Cari" ></input>
@@ -134,8 +142,18 @@
 
                         {!!$result->appends(Request::only('mhs'))->render()!!}
                     </div>
+                  
                 </div>
+                
+              </div>
+              <!-- /.row -->
             </div>
-        </div>
-    </div>
+            <!-- ./box-body -->
+            
+          </div>
+          <!-- /.box -->
+          <!-- /.nav-tabs-custom -->    
+        </section>
+        <!-- /.Left col -->
+      
 @endsection

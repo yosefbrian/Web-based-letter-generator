@@ -53,20 +53,26 @@
 @endsection
 
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 ">
-      <div class="panel panel-default">
-        <div class="panel-heading">Dashboard</div>
-          <div class="panel-body">
-            <br>
-            <form action="{{ url('/cms/search') }}" method="get" enctype="multipart/form-data">
+<div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Data Pegawai</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row"> 
+                <div class="col-xs-12">
+                 
+                  <form action="{{ url('/cms/search') }}" method="get" enctype="multipart/form-data">
                     <div class="col-xs-3 pull-left">
                       <input class="form-control"  type="text" name="search" id="search" placeholder="cari.." >
                       <input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
                     </div>
                     <button type="submit" class="btn btn-default pull-left" value="Cari"><span class="fa fa-search"></span></button>
-                  </form>
+            </form>
                   <div class="col-xs-12" ><a data-placement="bottom" href="#" title="Tambah" class="btn btn-default btn-fill" style="float:right; margin-top:-5px" data-toggle="modal" data-target="#modalimport2">Tambah Template</a>
                     <div class="modal fade" id="modalimport2" tabindex="-1" role="dialog">
                       <div class="modal-dialog" role="document">
@@ -208,10 +214,21 @@
               </div>
                   
                 </div>
+                  
+                </div>
+                
+              </div>
+              <!-- /.row -->
             </div>
-        </div>
-    </div>
-</div>
+            <!-- ./box-body -->
+            
+          </div>
+          <!-- /.box -->
+          <!-- /.nav-tabs-custom -->    
+        </section>
+        <!-- /.Left col -->
+      </div>
+      <!-- /.row (main row) -->
 @endsection
 
 @section('body.script')

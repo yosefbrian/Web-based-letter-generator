@@ -53,14 +53,22 @@
 @endsection
 
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 ">
-      <div class="panel panel-default">
-        <div class="panel-heading">Dashboard</div>
-          <div class="panel-body">
-            <br>
-            <form action="{{ url('/cms/search') }}" method="get" enctype="multipart/form-data">
+
+<!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Data Pegawai</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row"> 
+                <div class="col-xs-12">
+                 
+                  <form action="{{ url('/cms/search') }}" method="get" enctype="multipart/form-data">
                     <div class="col-xs-3 pull-left">
                       <input class="form-control"  type="text" name="search" id="search" placeholder="cari.." >
                       <input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
@@ -216,10 +224,23 @@
               </div>
                   
                 </div>
+                  
+                </div>
+                
+              </div>
+              <!-- /.row -->
             </div>
-        </div>
-    </div>
-</div>
+            <!-- ./box-body -->
+            
+          </div>
+          <!-- /.box -->
+          <!-- /.nav-tabs-custom -->    
+        </section>
+        <!-- /.Left col -->
+      </div>
+      <!-- /.row (main row) -->
+
+
 @endsection
 
 @section('body.script')
