@@ -5,39 +5,27 @@
 @show
 
 @section('page.location')
-<li class="active">Buat Surat</li>
-@overwrite
+Buat Surat
+@endsection
 
 @section('side.content')
-    <ul class="sidebar-menu">
+<ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="{{ url('/') }}">
-            <i class="fa fa-envelope-o"></i>
+            <i class="fa fa-files-o"></i>
             <span>Buat Surat</span>
           </a>
         </li>
         <li class="treeview">
           <a href="{{ url('/getData') }}">
-            <i class="fa fa-database"></i>
-            <span>Lihat Data</span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Sunting Data</span>
+            <i class="fa fa-dashboard"></i> <span>Data Pegawai</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="{{ url('getData/employees/create') }}"><i class="fa fa-user-plus"></i>Tambah Data Manual</a></li>
-          </ul>
-          <ul class="treeview-menu">
-            <li class="active"><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-cloud-upload"></i>Upload Data Excel</a></li>
-          </ul>
-          <ul class="treeview-menu">
-            <li class="active"><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-cloud-download"></i>Download Data Excel</a></li>
+            <li class="active"><a href="{{ url('getData/employees/create') }}"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -58,6 +46,23 @@
           <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">Buat Surat</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-wrench"></i></button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -125,7 +130,9 @@
                             <label class="control-label" for="NIP">Masukkan NIP</label>
                             
                             <select name="NIP1" placeholder="Masukkan NIP" id="NIP1"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
-                        <?php  
+
+
+                            <?php  
 
                             $i = 0;
 
@@ -141,6 +148,10 @@
                                 break;
                               }
                             ?>  
+
+                                                      
+                            @endforeach
+                          
 
                             </select>
 
@@ -219,19 +230,8 @@
                           </div>
                           
 
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti1" id="lamacuti1" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti1" id="lamacuti1" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -240,22 +240,24 @@
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
                             <select name="NIP2" placeholder="Masukkan NIP" id="NIP2"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
-                        <?php  
+                            <?php  
 
                             $i = 0;
 
                             ?>
-
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
 
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -336,19 +338,8 @@
                       
 
                       
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti2" id="lamacuti2" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti2" id="lamacuti2" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -366,13 +357,16 @@
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
 
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -453,19 +447,8 @@
                       
 
                       
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti3" id="lamacuti3" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti3" id="lamacuti3" type="text" class="form-control"/>
                       </div>
 
                       </div>
@@ -490,7 +473,10 @@
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -568,19 +554,8 @@
                           </select>
                           </div>
 
-                      <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti4" id="lamacuti4" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti4" id="lamacuti4" type="text" class="form-control"/>
                       </div>
 
                       </div>
@@ -590,7 +565,7 @@
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
                             <select name="NIP5" placeholder="Masukkan NIP" id="NIP5"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
-                        <?php  
+                          <?php  
 
                             $i = 0;
 
@@ -599,13 +574,16 @@
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
 
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -683,19 +661,8 @@
                           </select>
                           </div>
                       
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti5" id="lamacuti5" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti5" id="lamacuti5" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -704,7 +671,8 @@
                        <label class="control-label" for="NIP">Masukkan NIP</label>
                             
                             <select name="NIP6" placeholder="Masukkan NIP" id="NIP6"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
-                        <?php  
+                        
+                              <?php  
 
                             $i = 0;
 
@@ -712,14 +680,16 @@
 
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
-
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -798,18 +768,7 @@
                           </div>
                       
                        <label class="control-label">Lama Cuti (hanya angka)</label>
-                        <select name="lamacuti6" id="lamacuti6" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                            <input name="lamacuti6" id="lamacuti6" type="text" class="form-control"/>
                       </div>      
                       </div>
 
@@ -823,17 +782,18 @@
                             $i = 0;
 
                             ?>
-
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
-
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -911,19 +871,8 @@
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti7" id="lamacuti7" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti7" id="lamacuti7" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -937,17 +886,19 @@
                             $i = 0;
 
                             ?>
-
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
 
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -1025,19 +976,8 @@
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti8" id="lamacuti8" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti8" id="lamacuti8" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -1054,14 +994,16 @@
 
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
-
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -1139,19 +1081,8 @@
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti9" id="lamacuti9" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti9" id="lamacuti9" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -1160,22 +1091,23 @@
                        <label class="control-label" for="NIP10">Masukkan NIP</label>
                             
                             <select name="NIP10" placeholder="Masukkan NIP" id="NIP10"  required="required" id="surat" class="form-control selectpicker" data-live-search="true" title="NIP - Nama">
-                      <?php  
+                        <?php  
 
                             $i = 0;
 
                             ?>
-
                         @foreach ($employeList as $book)
                              <option value={{ $book->nip }}>{{ $book->nip }} - {{ $book->nama }}</option>
-
-                            <?php  
+                             <?php  
                               $i += 1;
 
                               if($i==20){
                                 break;
                               }
-                            ?>  
+                            ?> 
+
+                            @endforeach
+
 
                             </select>
 
@@ -1253,19 +1185,8 @@
                           </select>
                           </div>
 
-                       <label class="control-label">Lama Cuti</label>
-                        <select name="lamacuti10" id="lamacuti10" class="form-control selectpicker" title="Pilih Angka">
-                         <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                       <label class="control-label">Lama Cuti (hanya angka)</label>
+                            <input name="lamacuti10" id="lamacuti10" type="text" class="form-control"/>
                       </div>
                       </div>
 
@@ -1293,6 +1214,12 @@
           <div class="box box-default">
             <div class="box-header with-border">
               <h3 class="box-title">Petunjuk Penggunaan</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
             </div>
             <!-- /.box-header -->
             
