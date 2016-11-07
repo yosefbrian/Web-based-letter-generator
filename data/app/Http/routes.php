@@ -49,8 +49,20 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('import', array('uses' => 'ExportController@import', 'as' => 'admin.users.import'));
    
 
-   Route::post('upload', 'ExportController@upload');
-
+    Route::post('upload', 'ExportController@upload');
+    Route::get('/log', 'logRecordController@getData');
+    Route::post('/log/update/{id}', 'logRecordController@update');
+    Route::get('/log/update/{id}', array('uses' => 'logRecordController@update'));
+    Route::get('/logcari', 'logRecordController@searchRecord');
+    // Route::get('/upload', function() {
+    //     return view('upload');
+    Route::get('/cms', 'templateController@getData');
+    Route::get('/cms/search', 'templateController@search');
+    Route::get('/cms/{id}/delete', 'templateController@delete');
+    Route::post('/cms/tambah', 'templateController@create');
+    Route::get('/cms/tambah', array('uses' => 'templateController@create'));
+    Route::post('/cms/update/{id}', 'templateController@update');
+    Route::get('/cms/update/{id}', array('uses' => 'templateController@update'));
 
     // Route::get('/upload', function() {
     //     return view('upload');
