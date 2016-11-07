@@ -33,9 +33,15 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="{{url('/log')}}">
             <i class="fa fa-files-o"></i>
             <span>Log</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="{{url('/cms')}}">
+            <i class="fa fa-file-text"></i>
+            <span>Template</span>
           </a>
         </li>
       </ul>
