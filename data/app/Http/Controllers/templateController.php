@@ -26,7 +26,7 @@ class templateController extends Controller
     {
     	$uploadOk = 1;
 
-	    $target_dir = "template/";
+	    $target_dir = "templates/";
 	    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	    // Check if image file is a actual image or fake image
@@ -71,7 +71,7 @@ class templateController extends Controller
     {
     	$uploadOk = 1;
 
-	    $target_dir = "template/";
+	    $target_dir = "templates/";
 	    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	    // Check if image file is a actual image or fake image
