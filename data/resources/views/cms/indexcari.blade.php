@@ -43,7 +43,7 @@
             <span>Log</span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="{{url('/cms')}}">
             <i class="fa fa-file-text"></i>
             <span>Template</span>

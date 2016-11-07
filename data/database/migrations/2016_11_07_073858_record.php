@@ -22,6 +22,7 @@ class Record extends Migration
             $table->string('keterangan');
             $table->string('status');
             $table->timestamps();
+        });
     }
 
     /**
